@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+
+//$fontAutumnChant: 'AutumnChant';
+//$fontBeautyDemo: 'BeautyDemo';
+//$fontBellMTItalic: 'BellMTItalic';
+//
+//@font-face { font-family: $fontBeautyDemo; src: url('./assets/font/BeautyDemo.ttf'); }
+//@font-face { font-family: $fontAutumnChant; src: url('./assets/font/AutumnChant.otf'); }
+//@font-face { font-family: $fontBellMTItalic; src: url('./assets/font/BellMTItalic.ttf'); }
+//
+
+@font-face { font-family: BeautyDemo; src: url('./assets/font/BeautyDemo.ttf'); }
+@font-face { font-family: AutumnChant; src: url('./assets/font/AutumnChant.otf'); }
+@font-face { font-family: BellMt; src: url('./assets/font/BellMTItalic.ttf'); }
+
+$fontAutumnChant: AutumnChant;
+$fontBeautyDemo: BeautyDemo;
+$fontBellMtItalic: BellMt;
+
+footer {
+  font-family: $fontAutumnChant;
+}
+
+
+header {
+  font-family: $fontBeautyDemo;
+}
+

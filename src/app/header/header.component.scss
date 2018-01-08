@@ -1,0 +1,22 @@
+//@import "../general";
+
+
+:host {
+
+  background-color: white;
+  height: 60px;
+  width: 100vw;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  font-family: BellMt;
+
+  .row {
+    font-size: 36px;
+
+    .margin-left {
+      padding-left: 32px;
+    }
+  }
+}

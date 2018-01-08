@@ -7,8 +7,35 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <style>
+    @font-face { font-family: BellMt; src: url('assets/font/BellMTItalic.ttf'); }
+    @font-face { font-family: AutumnChant; src: url('assets/font/AutumnChant.otf'); }
+
+    .footer {
+      font-family: AutumnChant;
+    }
+    .content {
+      font-family: AutumnChant;
+    }
+  </style>
+
+  <script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDjzmb8W0l_fgLsAxgNFllp8PkIXUmoEys",
+      authDomain: "jelleportfoli.firebaseapp.com",
+      databaseURL: "https://jelleportfoli.firebaseio.com",
+      projectId: "jelleportfoli",
+      storageBucket: "",
+      messagingSenderId: "776863433926"
+    };
+    firebase.initializeApp(config);
+  </script>
+
 </head>
-<body>
+<body class="content footer">
   <app-root></app-root>
 </body>
 </html>

@@ -1,0 +1,19 @@
+
+
+:host {
+
+
+  .menu-item {
+    width: 100%;
+    font-size: 45px;
+    .item:hover {
+      cursor: pointer;
+    }
+  }
+
+  .menu-item-expand {
+    border-left: 1px solid black;
+    text-align: left;
+    font-size: 25px;
+  }
+}
