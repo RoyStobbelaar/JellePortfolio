@@ -1,9 +1,10 @@
 import {Component} from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'footer',
   template: `    
-    <div class="signature">
+    <div class="signature" (click)="navigate()">
       2017 Jelle de Jong
     </div>
   `,
@@ -12,5 +13,13 @@ import {Component} from '@angular/core';
 
 export class FooterComponent {
 
+
+  constructor(private _router: Router){
+
+  }
+
+  public navigate() {
+    this._router.navigateByUrl('Home');
+  }
 
 }

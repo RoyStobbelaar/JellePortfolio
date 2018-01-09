@@ -1,0 +1,21 @@
+
+:host {
+
+  .left-options {
+
+    margin: auto;
+    position: absolute;
+    //left: 0;
+    top: 0;
+    //right: 0;
+    bottom: 0;
+
+    //Size variables will be overwritten when used correctly
+    height: 300px;
+    width: 400px;
+    font-size: 40px;
+    color: white;
+    font-family: BellMt;
+  }
+
+}

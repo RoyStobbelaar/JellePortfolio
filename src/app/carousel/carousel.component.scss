@@ -1,0 +1,16 @@
+:host {
+
+  .carousel-wrapper {
+    display: inline-flex;
+
+    .image {
+      margin-left: 0;
+      //transition: margin-left 1s;
+
+      &.leave {
+        margin-left: -1920px;
+        transition: margin-left 1s;
+      }
+    }
+  }
+}
