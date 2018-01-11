@@ -14,12 +14,18 @@ import {RouterModule, Routes} from '@angular/router';
 import {RendersComponent} from './renders/renders.component';
 import {CarouselComponent} from './carousel/carousel.component';
 import {PhotographyComponent} from './photography/photography.component';
+import {UrbanComponent} from './urban/urban.component';
+import {LowpolyComponent} from './lowpoly/lowpoly.component';
+import {OtherComponent} from './other/other.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'Home', pathMatch: 'full'},
   {path: 'Home', component: ContentComponent},
   {path: 'Renders', component: RendersComponent},
   {path: 'Photography', component: PhotographyComponent},
+  {path: 'Renders/Urban', component: UrbanComponent},
+  {path: 'Renders/Lowpoly', component: LowpolyComponent},
+  {path: 'Renders/Otherrenders', component: OtherComponent},
   {path: '**', redirectTo: 'Home'}
 ];
 
@@ -32,6 +38,9 @@ const routes: Routes = [
     RendersComponent,
     SlideMenuComponent,
     CarouselComponent,
+    UrbanComponent,
+    LowpolyComponent,
+    OtherComponent,
     PhotographyComponent
   ],
   imports: [

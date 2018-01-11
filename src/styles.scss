@@ -21,6 +21,11 @@ footer {
   font-family: $fontAutumnChant;
 }
 
+body {
+  overflow-x: hidden;
+  width: 100vw;
+}
+
 
 header {
   font-family: $fontBeautyDemo;

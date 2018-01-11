@@ -1,10 +1,19 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'header',
   template: `
+    
+    <div class="row" *ngIf="titleOnly">
 
-    <div class="row">
+      <div class="col-sm-4 col-md-4 col-lg-6 margin-left menu-item">
+        <slide-menu [title]="title"></slide-menu>
+      </div>
+      
+    </div>
+    
+
+    <div class="row" *ngIf="!titleOnly">
       <div class="col-sm-4 col-md-4 col-lg-6 margin-left menu-item">
         <slide-menu [title]="'About Me'" [items]="['Intro', 'Hobbies', 'Music', 'Inspiration']"></slide-menu>
       </div>
@@ -22,5 +31,7 @@ import {Component} from '@angular/core';
 
 export class HeaderComponent {
 
+  @Input() title: string;
+  @Input() titleOnly: boolean;
 
 }

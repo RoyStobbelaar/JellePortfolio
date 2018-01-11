@@ -1,0 +1,99 @@
+
+.header {
+  border-bottom: 1px solid black;
+}
+
+.footer {
+  border-top: 1px solid black;
+}
+
+
+.photo-zoom {
+
+  overflow-x: hidden;
+  max-width: 100%;
+  margin-top: 120px;
+  display: inline-flex;
+
+  .left-photo {
+    overflow: hidden;
+    img {
+      margin: auto;
+      position: absolute;
+      left: -968px;
+      top: 0;
+      bottom: 0;
+      height: 660px;
+      max-width: 1080px;
+      overflow: hidden;
+
+      &.rotate-left {
+        right: 0;
+        left: 0;
+        height: 720px;
+        max-width: 1280px;
+        transition: all 1s;
+        z-index: 2;
+      }
+    }
+    img:hover {
+      cursor: pointer;
+    }
+  }
+
+  .mid-photo {
+    overflow: hidden;
+    img {
+      margin: auto;
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      height: 720px;
+      max-width: 1280px;
+      overflow: hidden;
+
+      &.rotate-right {
+        left: -968px;
+        height: 660px;
+        max-width: 1080px;
+        transition: all 1s;
+      }
+
+      &.rotate-left {
+        right: -968px;
+        height: 660px;
+        max-width: 1080px;
+        transition: all 1s;
+        z-index: 1;
+      }
+    }
+  }
+
+  .right-photo {
+    overflow: hidden;
+    img {
+      margin: auto;
+      position: absolute;
+      top: 0;
+      right: -968px;
+      bottom: 0;
+      height: 660px;
+      max-width: 1080px;
+      overflow: hidden;
+
+      &.rotate-right {
+        right: 0;
+        left: 0;
+        height: 720px;
+        max-width: 1280px;
+        transition: all 1s;
+        z-index: 2;
+      }
+    }
+    img:hover {
+      cursor: pointer;
+    }
+  }
+}

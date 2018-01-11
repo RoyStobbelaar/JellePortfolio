@@ -14,7 +14,7 @@ import {Router} from '@angular/router';
 
         <div *ngIf="open" class="item menu-item-expand"[@expand]>
             <div *ngFor="let item of items">
-              {{item}}
+              <div (click)="navigateChild(item)">{{item}}</div>
             </div>
           </div>
 
@@ -60,6 +60,15 @@ export class SlideMenuComponent {
 
   public navigate(path: string) {
     this._router.navigateByUrl(path);
+  }
+
+  public navigateChild(path: string) {
+
+    let formattedPath = path.replace(' ','').toLowerCase();
+    formattedPath = formattedPath.charAt(0).toUpperCase() + formattedPath.slice(1);
+
+    console.log(formattedPath);
+    this._router.navigateByUrl(`${this.title}/${formattedPath}`);
   }
 
 }

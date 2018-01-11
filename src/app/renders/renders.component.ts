@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'renders',
@@ -8,10 +9,10 @@ import {Component, OnInit} from '@angular/core';
     <carousel [photos]="photos"></carousel>
     
     <div class="left-options">
-      <div class="option">
+      <div class="option" (click)="navigate('Lowpoly')">
         Low poly
       </div>
-      <div class="option">
+      <div class="option" (click)="navigate('Otherrenders')">
         Other renders
       </div>
     </div>
@@ -25,7 +26,7 @@ export class RendersComponent implements OnInit {
 
   public photos: string[];
 
-  constructor() {
+  constructor(private _router: Router) {
 
   }
 
@@ -33,6 +34,10 @@ export class RendersComponent implements OnInit {
     this.photos = [];
     this.photos.push('/assets/photo/Background1.png');
     this.photos.push('/assets/photo/Background2.png');
+  }
+
+  public navigate(path: string) {
+    this._router.navigateByUrl(`Renders/${path}`);
   }
 
 }
